@@ -1,4 +1,7 @@
-package com.GameCode.teamfighttacticsapp;
+package com.GameCode.teamfighttacticsapp.Champs;
+
+import com.GameCode.teamfighttacticsapp.Champs.Clases.Clase;
+import com.GameCode.teamfighttacticsapp.Champs.Origenes.Origen;
 
 public class Champs {
     private String imagePath, name, ulti;
