@@ -1,9 +1,6 @@
 package com.GameCode.teamfighttacticsapp.Champs.Clases;
 
-public abstract class Clase {
-    private String desc;
-
-    public String getDesc(){
-        return desc;
-    }
+public interface Clase {
+    String desc = "W.I.P.";
+    String getDesc();
 }
