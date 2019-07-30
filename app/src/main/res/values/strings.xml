@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">TeamFightTacticsApp</string>
     <string name="image">image</string>
+    <string name="campeones">CAMPEÓNES</string>
+    <string name="items">ÍTEMS</string>
+    <string name="seleccionar">SELECCIONAR</string>
+    <string name="estadisticas">ESTADÍSTICAS</string>
 </resources>
