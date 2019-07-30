@@ -7,6 +7,8 @@ public class Champs {
     private String imagePath, name, ulti;
     private int buy, tier;
     private Origen[] origen; private Clase[] clase;
+
+
     /*
     Constructor
      */
