@@ -1,4 +1,4 @@
-package com.GameCode.teamfighttacticsapp.Champs;
+package com.GameCode.teamfighttacticsapp;
 
 public class Item {
     private String ImagePath, name;
