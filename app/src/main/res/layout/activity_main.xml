@@ -9,48 +9,151 @@
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="627dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        android:layout_marginStart="8dp"
+        android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/logo" />
 
-    <LinearLayout
-        android:layout_width="194.7dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="310dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/triangulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/tri_ngulo_2" />
+
+    <ImageButton
+        android:id="@+id/triangulo2b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/triangulo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/tri_ngulo_2_b" />
+
+    <ImageButton
+        android:id="@+id/triangulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/tri_ngulo_1" />
+
+    <ImageButton
+        android:id="@+id/triangulo1b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/triangulo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/tri_ngulo_1_b" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/back"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/triangulo1" />
-
-    </LinearLayout>
+        app:srcCompat="@drawable/pinguino" />
 
     <TextView
-        android:id="@+id/txt1"
-        android:layout_width="188dp"
-        android:layout_height="39dp"
+        android:id="@+id/txtCampeones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="485dp"
         android:text="@string/campeones"
         android:textColor="@color/colorAccent"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/triangulo2"
+        app:layout_constraintEnd_toEndOf="@+id/triangulo2"
+        app:layout_constraintStart_toStartOf="@+id/triangulo2"
+        app:layout_constraintTop_toTopOf="@+id/triangulo2" />
+
+    <TextView
+        android:id="@+id/txtItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/items"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/triangulo1"
+        app:layout_constraintEnd_toEndOf="@+id/triangulo1"
+        app:layout_constraintStart_toStartOf="@+id/triangulo1"
+        app:layout_constraintTop_toTopOf="@+id/triangulo1" />
+
+    <ImageButton
+        android:id="@+id/selec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/jugar" />
+
+    <TextView
+        android:id="@+id/txtSelec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccionar"
+        android:textColor="@color/colorAccent"
+        android:textSize="21.7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/selec"
+        app:layout_constraintEnd_toEndOf="@+id/selec"
+        app:layout_constraintStart_toStartOf="@+id/selec"
+        app:layout_constraintTop_toTopOf="@+id/selec" />
+
+    <ImageButton
+        android:id="@+id/estadistica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selec"
+        app:srcCompat="@drawable/estad_sticasbutton" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/estadistica"
+        app:layout_constraintStart_toStartOf="@+id/estadistica"
+        app:layout_constraintTop_toTopOf="@+id/estadistica"
+        app:srcCompat="@drawable/ajustes" />
+
+    <TextView
+        android:id="@+id/txtEstadisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/estadisticas"
+        android:textColor="@color/cream"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/estadistica"
+        app:layout_constraintEnd_toEndOf="@+id/estadistica"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="@+id/estadistica" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="506dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
