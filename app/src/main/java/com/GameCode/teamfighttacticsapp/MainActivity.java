@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.GameCode.teamfighttacticsapp.Items.ItemContainer;
+
 enum MenuMode{
     ITEM,CHAMP,NONE;
 }
@@ -37,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
         txtEstadisticas = findViewById(R.id.txtEstadisticas);
         txtItems = findViewById(R.id.txtItems);
         txtSelec = findViewById(R.id.txtSelec);
-        butChamp = findViewById(R.id.triangulo1);
-        butItem = findViewById(R.id.triangulo2);
+        butItem = findViewById(R.id.triangulo1);
+        butChamp = findViewById(R.id.triangulo2);
         butSelec = findViewById(R.id.selec);
-        butChampSelec = findViewById(R.id.triangulo1b);
-        butItemSelec = findViewById(R.id.triangulo2b);
+        butItemSelec = findViewById(R.id.triangulo1b);
+        butChampSelec = findViewById(R.id.triangulo2b);
         fuente = Typeface.createFromAsset(getAssets(), carpetaFuente);
 
         txtCampeones.setTypeface(fuente);
@@ -67,28 +69,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (menuMode==MenuMode.ITEM){
-                    Intent intent = new Intent(view.getContext(),ItemActivity.class);
-                    startActivityForResult(intent,0);
+                    Intent intent = new Intent(getApplicationContext(),Items_Activity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.move_to_left_enter,R.anim.move_to_left_out);
                 }
             }
         });
-
-
     }
 
     void OnChampSelect(){
         menuMode=MenuMode.CHAMP;
         butItemSelec.setVisibility(View.INVISIBLE);
         butChampSelec.setVisibility(View.VISIBLE);
-        txtCampeones.setTextColor(Color.parseColor("#9e6c36"));
-        txtItems.setTextColor(Color.parseColor("#0c1a1e"));
+        txtCampeones.setTextColor(Color.parseColor("#0c1a1e"));
+        txtItems.setTextColor(Color.parseColor("#9e6c36"));
     }
 
     void OnItemSelect(){
         menuMode=MenuMode.ITEM;
         butItemSelec.setVisibility(View.VISIBLE);
         butChampSelec.setVisibility(View.INVISIBLE);
-        txtItems.setTextColor(Color.parseColor("#9e6c36"));
-        txtCampeones.setTextColor(Color.parseColor("#0c1a1e"));
+        txtItems.setTextColor(Color.parseColor("#0c1a1e"));
+        txtCampeones.setTextColor(Color.parseColor("#9e6c36"));
     }
 }

@@ -1,11 +1,25 @@
 package com.GameCode.teamfighttacticsapp.Items;
 
-public class ItemPrimitivo {
-    private String ImagePath, name, desc;
+public abstract class ItemPrimitivo  {
+    private String name, desc;
+    private int imagePath;
 
-    public ItemPrimitivo(String imagePath, String name, String desc) {
-        ImagePath = imagePath;
+    public ItemPrimitivo(int imagePath, String name, String desc) {
+        this.imagePath = imagePath;
         this.name = name;
         this.desc = desc;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public int getImagePath() {
+        return imagePath;
+    }
+    public abstract ItemPrimitivo[] getPadres();
 }

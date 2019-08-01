@@ -4,15 +4,15 @@ import com.GameCode.teamfighttacticsapp.Champs.Clases.Clase;
 import com.GameCode.teamfighttacticsapp.Champs.Origenes.Origen;
 
 public class Champs {
-    private String imagePath, name, ulti;
-    private int buy, tier;
+    private String name, ulti;
+    private int buy, tier, imagePath;
     private Origen[] origen; private Clase[] clase;
 
 
     /*
     Constructor
      */
-    public Champs(String imagePath, String name, String ulti, int buy, int tier, Origen[] origen, Clase[] clase) {
+    public Champs(int imagePath, String name, String ulti, int buy, int tier, Origen[] origen, Clase[] clase) {
         this.imagePath = imagePath;
         this.name = name;
         this.ulti = ulti;
@@ -26,7 +26,7 @@ public class Champs {
     /*
     Getters
      */
-    public String getImagePath() {
+    public int getImagePath() {
         return imagePath;
     }
 
@@ -58,7 +58,7 @@ public class Champs {
     /*
     Setters
      */
-    public void setImagePath(String imagePath) {
+    public void setImagePath(int imagePath) {
         this.imagePath = imagePath;
     }
 
