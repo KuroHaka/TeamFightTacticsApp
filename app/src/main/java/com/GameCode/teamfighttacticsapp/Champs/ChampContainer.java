@@ -59,7 +59,7 @@ public class ChampContainer {
         Iterator<Champs> iter = champList.iterator();
         while(iter.hasNext()){
             //INTRODUCIR AQUÍ TIPO DE BÚSQUEDA
-            if (searching.equals(iter.next().getName())){
+            if (iter.next().getName().contains(searching)){
                 searched.add(iter.next());
             }
         }
