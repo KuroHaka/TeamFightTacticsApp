@@ -1,6 +1,9 @@
 package com.GameCode.teamfighttacticsapp.Champs.Origenes;
 
-public interface Origen {
-    String desc = "W.I.P.";
-    String getDesc();
+public class Origen {
+    private String desc;
+    public String getDesc(){ return desc;}
+    Origen(String desc) {
+        this.desc = desc;
     }
+}
