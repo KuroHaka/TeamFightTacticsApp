@@ -15,6 +15,7 @@ public class ContenedorClases {
     private Clase pistolero = new Clase("Los pistoleros obtienen un 50% de probabilidades de atacar a un enemigo adicional. Esta habilidad se activa con 2 pistoleros en tu tablero y se incrementa a todos los enemigos dentro del rango si hay 4 pistoleros juntos.");
     private Clase ranger = new Clase("Cada tres segundos, los rangers tienen la posibilidad de duplicar su velocidad de ataque por 3 segundos. 25% de probabilidades con 2 rangers y 65% con 4.");
     private Clase luchador = new Clase("Los luchadores obtienen 300 puntos de Vida extra al haber al menos 2 en el tu tablero. Si hay 4 o más, la vida se incrementa a 700 puntos extra.");
+    private Clase caballero = new Clase(" Los caballeros bloquean daño de los ataques básicos. 20 puntos de daño bloqueado con 2 caballeros, 40 con 4 y 60 con 6.");
 
     public ContenedorClases() {
     }
@@ -51,5 +52,11 @@ public class ContenedorClases {
         return ranger;
     }
 
-    public Clase Luchador(){ return luchador;}
+    public Clase Luchador(){
+        return luchador;
+    }
+
+    public Clase Caballero(){
+        return caballero;
+    }
 }
