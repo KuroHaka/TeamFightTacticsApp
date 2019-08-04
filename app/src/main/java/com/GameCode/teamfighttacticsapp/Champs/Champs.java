@@ -4,7 +4,8 @@ import com.GameCode.teamfighttacticsapp.Champs.Clases.Clase;
 import com.GameCode.teamfighttacticsapp.Champs.Origenes.Origen;
 
 public class Champs {
-    private String name, ulti;
+    private String name;
+    private Habilidad ulti;
     private int buy, tier, imagePath;
     private Origen[] origen; private Clase[] clase;
 
@@ -12,7 +13,7 @@ public class Champs {
     /*
     Constructor
      */
-    public Champs(int imagePath, String name, String ulti, int buy, int tier, Origen[] origen, Clase[] clase) {
+    public Champs(int imagePath, String name, Habilidad ulti, int buy, int tier, Origen[] origen, Clase[] clase) {
         this.imagePath = imagePath;
         this.name = name;
         this.ulti = ulti;
@@ -34,7 +35,7 @@ public class Champs {
         return name;
     }
 
-    public String getUlti() {
+    public Habilidad getUlti() {
         return ulti;
     }
 
@@ -66,7 +67,7 @@ public class Champs {
         this.name = name;
     }
 
-    public void setUlti(String ulti) {
+    public void setUlti(Habilidad ulti) {
         this.ulti = ulti;
     }
 
