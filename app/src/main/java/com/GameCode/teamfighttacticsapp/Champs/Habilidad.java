@@ -4,12 +4,18 @@ public class Habilidad {
     private String name, description;
     private int imagePath;
 
+    /*
+    Constructor
+     */
     Habilidad(String name, String description, int imagePath) {
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
     }
 
+    /*
+    Getters
+     */
     public String getName() {
         return name;
     }

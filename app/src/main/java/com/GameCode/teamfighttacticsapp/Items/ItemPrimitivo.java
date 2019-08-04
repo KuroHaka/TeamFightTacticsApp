@@ -1,15 +1,24 @@
 package com.GameCode.teamfighttacticsapp.Items;
 
-public abstract class ItemPrimitivo  {
+public class ItemPrimitivo  {
     private String name, desc;
     private int imagePath;
 
+    /**
+     * Constructor de ítems primitivos con parámetros predeterminados.
+     * @param imagePath
+     * @param name
+     * @param desc
+     */
     public ItemPrimitivo(int imagePath, String name, String desc) {
         this.imagePath = imagePath;
         this.name = name;
         this.desc = desc;
     }
 
+    /*
+    Getters
+     */
     public String getName() {
         return name;
     }
@@ -21,5 +30,5 @@ public abstract class ItemPrimitivo  {
     public int getImagePath() {
         return imagePath;
     }
-    public abstract ItemPrimitivo[] getPadres();
+
 }

@@ -54,30 +54,4 @@ public class Champs {
     public Clase[] getClase() {
         return clase;
     }
-
-
-    /*
-    Setters
-     */
-    public void setImagePath(int imagePath) {
-        this.imagePath = imagePath;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUlti(Habilidad ulti) {
-        this.ulti = ulti;
-    }
-
-    public void setBuy(int buy) {
-        this.buy = buy;
-    }
-
-    public void setTier(int tier) {
-        this.tier = tier;
-    }
-
-
 }
