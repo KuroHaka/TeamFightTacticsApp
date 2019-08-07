@@ -15,10 +15,7 @@ public class ChampContainer {
     public ArrayList<Champs> getChampList() {
         return champList;
     }
-    /*
-    Para obtener los campeones por clase u origen lo mejor es que se obtenga la clase o el origen
-    del campeón y se comparen las descripciones de dichas clases u origenes.
-     */
+
     public ChampContainer() {
         ContenedorClases clase = new ContenedorClases();
         ContenedorOrigenes origen = new ContenedorOrigenes();
