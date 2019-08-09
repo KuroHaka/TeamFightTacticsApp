@@ -1,8 +1,10 @@
 package com.GameCode.teamfighttacticsapp.Items;
 
+import com.GameCode.teamfighttacticsapp.Champs.Champs;
 import com.GameCode.teamfighttacticsapp.R;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ItemContainer {
     protected ArrayList<ItemPrimitivo> itemList;
@@ -64,5 +66,28 @@ public class ItemContainer {
 
     public ArrayList<ItemPrimitivo> getItemList() {
         return itemList;
+    }
+
+    public ArrayList<ItemPrimitivo> findByName(String searching){
+        ArrayList<ItemPrimitivo> searched = new ArrayList<>();
+        Iterator<ItemPrimitivo> iter = itemList.iterator();
+        while(iter.hasNext()){
+            //INTRODUCIR AQUÍ TIPO DE BÚSQUEDA
+            if (iter.next().getName().contains(searching)){
+                searched.add(iter.next());
+            }
+        }
+        return searched;
+    }
+
+    public ArrayList<Item> findByFather(ItemPrimitivo father){
+        ArrayList<Item> searched = new ArrayList<>();
+        Iterator<ItemPrimitivo> iter = itemList.iterator();
+        while(iter.hasNext()){
+            if (((Item)iter.next()).getPadres()[0] == father || ((Item)iter.next()).getPadres()[1] == father ){
+                searched.add((Item)iter.next());
+            }
+        }
+        return searched;
     }
 }
