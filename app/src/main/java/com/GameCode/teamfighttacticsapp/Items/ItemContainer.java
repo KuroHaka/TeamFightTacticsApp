@@ -90,4 +90,16 @@ public class ItemContainer {
         }
         return searched;
     }
+
+    public ArrayList<Item> findByFathers(ItemPrimitivo father1, ItemPrimitivo father2){
+        ArrayList<Item> searched = new ArrayList<>();
+        Iterator<ItemPrimitivo> iter = itemList.iterator();
+        while(iter.hasNext()){
+            if(((Item)iter.next()).getPadres()[0] == father1 || ((Item)iter.next()).getPadres()[1] == father1 &&
+                    ((Item)iter.next()).getPadres()[0] == father2 || ((Item)iter.next()).getPadres()[1] == father2){
+                searched.add((Item)iter.next());
+            }
+        }
+        return searched;
+    }
 }

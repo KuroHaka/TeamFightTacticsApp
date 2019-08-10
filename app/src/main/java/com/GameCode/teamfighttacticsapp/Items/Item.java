@@ -18,7 +18,6 @@ public class Item extends ItemPrimitivo {
     /*
     Getters
      */
-
     /**
      * Getter de los padres del ítem, solo válido con ítems no primitivos.
      * @return
@@ -26,4 +25,13 @@ public class Item extends ItemPrimitivo {
     public ItemPrimitivo[] getPadres() {
         return padres;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if(((Item)o).getName().equals(this.getName())){
+            return true;
+        }
+        return false;
+    }
+
 }

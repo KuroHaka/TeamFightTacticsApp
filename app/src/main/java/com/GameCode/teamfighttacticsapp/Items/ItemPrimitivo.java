@@ -31,4 +31,13 @@ public class ItemPrimitivo  {
         return imagePath;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if(((Item)o).getName().equals(this.getName())){
+            return true;
+        }
+        return false;
+    }
+
 }
+
