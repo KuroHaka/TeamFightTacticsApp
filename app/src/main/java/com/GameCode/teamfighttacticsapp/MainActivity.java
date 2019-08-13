@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.GameCode.teamfighttacticsapp.Items.ItemContainer;
 
 enum MenuMode{
     ITEM,CHAMP,NONE;
@@ -72,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(),Items_Activity.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.move_to_left_enter,R.anim.move_to_left_out);
+                }
+                else if (menuMode==MenuMode.CHAMP){
+                    Intent intent = new Intent(getApplicationContext(),ItemView_Activity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.move_to_right_enter,R.anim.move_to_right_out);
                 }
             }
         });

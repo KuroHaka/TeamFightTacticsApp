@@ -15,6 +15,10 @@ public class Control {
         this.datos = new Datos();
     }
 
+    public ArrayList<ItemPrimitivo> getAllItems(){
+        return this.datos.getItems().getItemList();
+    }
+
     /*
     Item
      */
@@ -23,6 +27,7 @@ public class Control {
      * @param searching
      * @return
      */
+
     public ArrayList<Item> filterByParent(ItemPrimitivo searching){
         return this.datos.getItems().findByFather(searching);
     }
